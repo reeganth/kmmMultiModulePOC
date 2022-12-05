@@ -1,0 +1,19 @@
+CREATE TABLE Stories(
+    by TEXT NOT NULL ,
+    descendants INTEGER NOT NULL ,
+    id INTEGER NOT NULL ,
+    score INTEGER NOT NULL ,
+    time INTEGER NOT NULL ,
+    title TEXT NOT NULL ,
+    type TEXT NOT NULL ,
+    url TEXT NOT NULL );
+
+insertStories:
+INSERT INTO Stories(by,descendants,id,score,time,title,type,url)
+VALUES(?,?,?,?,?,?,?,?);
+
+removeAllStories:
+DELETE FROM Stories;
+
+selectAllStories:
+SELECT * FROM Stories;

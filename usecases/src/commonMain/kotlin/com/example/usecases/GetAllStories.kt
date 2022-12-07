@@ -1,5 +1,6 @@
 package com.example.usecases
 
+import com.example.datacontracts.StoriesDataContract
 import com.example.models.Story
 import kotlinx.coroutines.flow.Flow
 

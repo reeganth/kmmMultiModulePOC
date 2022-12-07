@@ -39,10 +39,10 @@ class StoryFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_item_list, container, false)
         storiesViewModel = StoriesViewModel(
             GetAllStories(
-                IntermediateStoriesDataSource(StoriesRepository(
+                StoriesRepository(
                     NetworkStoriesRepository,
                     StoriesLocalRepository(DatabaseDriverFactory(requireActivity().applicationContext))
-                ))
+                )
             )
         )
         // Set the adapter

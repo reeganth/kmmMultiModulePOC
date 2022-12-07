@@ -53,7 +53,6 @@ dependencies {
     implementation(project(mapOf("path" to ":models")))
     implementation(project(mapOf("path" to ":usecases")))
     implementation(project(mapOf("path" to ":data")))
-    implementation(project(mapOf("path" to ":intermediateDataLayer")))
     implementation(project(mapOf("path" to ":database")))
     implementation(project(mapOf("path" to ":network")))
     testImplementation("junit:junit:4.13.2")

@@ -12,25 +12,20 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "data"
+            baseName = "datacontracts"
         }
     }
 
     sourceSets {
-        val commonMain by getting {
-            dependencies{
+        val commonMain by getting{
+            dependencies {
                 implementation(project(":models"))
-                implementation(project(":database"))
-                implementation(project(":network"))
-                implementation(project(":datacontracts"))
                 implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-                implementation("com.squareup.sqldelight:coroutines-extensions:1.5.3")
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
-
             }
         }
         val androidMain by getting
@@ -57,13 +52,10 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.data"
+    namespace = "com.example.datacontracts"
     compileSdk = 32
     defaultConfig {
         minSdk = 21
         targetSdk = 32
     }
 }
-//dependencies {
-//    implementation(project(":models"))
-//}

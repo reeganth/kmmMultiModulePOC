@@ -20,6 +20,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(project(":models"))
+                implementation(project(":datacontracts"))
                 implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
             }
         }

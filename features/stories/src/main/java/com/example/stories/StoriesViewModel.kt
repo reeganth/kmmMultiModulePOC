@@ -19,9 +19,7 @@ class StoriesViewModel(private val getAllStoriesUseCase: GetAllStories) : ViewMo
 
     fun getAllStories() {
         viewModelScope.launch {
-            Log.i("reeganth","in launch")
             getAllStoriesUseCase().onEach { result ->
-                Log.i("reeganth","stories ${result.size}")
                 _storiesFlow.send(result)
             }.launchIn(CoroutineScope(Dispatchers.IO))
         }

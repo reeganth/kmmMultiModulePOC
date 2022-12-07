@@ -17,7 +17,6 @@ class StoriesRepository(
 
     override suspend fun getAllStories(): Flow<List<Story>> {
         val networkStories = networkStoriesRepository.getTopStories()
-        println("reeganth: network stories $networkStories")
         val storyEntities = networkStories.map(NetworkStory::asEntity)
         storiesLocalRepositoryContract.insertStories(storyEntities)
         return storiesLocalRepositoryContract.getAllStories()

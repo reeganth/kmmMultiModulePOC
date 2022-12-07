@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.data.StoriesRepository
 import com.example.database.DatabaseDriverFactory
 import com.example.database.StoriesLocalRepository
+import com.example.intermediatedatalayer.IntermediateStoriesDataSource
 import com.example.network.NetworkStoriesRepository
 import com.example.usecases.GetAllStories
 
@@ -38,10 +39,10 @@ class StoryFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_item_list, container, false)
         storiesViewModel = StoriesViewModel(
             GetAllStories(
-                StoriesRepository(
+                IntermediateStoriesDataSource(StoriesRepository(
                     NetworkStoriesRepository,
                     StoriesLocalRepository(DatabaseDriverFactory(requireActivity().applicationContext))
-                )
+                ))
             )
         )
         // Set the adapter

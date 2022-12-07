@@ -11,7 +11,6 @@ class Greeting {
     fun greeting(): String {
         CoroutineScope(Dispatchers.Default).launch {
             NetworkStoriesRepository.getTopStories().forEach {
-                println("reeganth: news: $it")
             }
         }
         return "Hello, ${platform.name}!"

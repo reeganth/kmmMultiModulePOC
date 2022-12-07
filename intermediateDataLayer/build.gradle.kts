@@ -12,15 +12,18 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "usecases"
+            baseName = "intermediateDataLayer"
         }
     }
 
     sourceSets {
         val commonMain by getting {
-            dependencies {
+            dependencies{
+                implementation(project(":usecases"))
                 implementation(project(":models"))
+                implementation(project(":data"))
                 implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+                implementation("com.squareup.sqldelight:coroutines-extensions:1.5.3")
             }
         }
         val commonTest by getting {
@@ -52,7 +55,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.example.usecases"
+    namespace = "com.example.intermediatedatalayer"
     compileSdk = 32
     defaultConfig {
         minSdk = 21

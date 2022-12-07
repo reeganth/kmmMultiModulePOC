@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/database" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/stories" />
+            <option value="$PROJECT_DIR$/intermediateDataLayer" />
             <option value="$PROJECT_DIR$/models" />
             <option value="$PROJECT_DIR$/network" />
             <option value="$PROJECT_DIR$/usecases" />

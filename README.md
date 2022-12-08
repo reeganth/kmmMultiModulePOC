@@ -1,3 +1,3 @@
 # kmmMultiModulePOC
 
-![Modular Clean ](https://github.com/reeganth/kmmMultiModulePOC/blob/cb0b0cee4a4d2b983adf02a6cc1a37f5ff9cff77/Clean%20Modularization.jpeg)
+<img src="https://github.com/reeganth/kmmMultiModulePOC/blob/ba083f642fbaf2433e6730f428e43beccec289a8/Desk%20Moularization.jpg" alt="drawing" width="200"/>
